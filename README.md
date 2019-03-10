@@ -16,7 +16,7 @@ Please let us know your thoughts by contacting us at feedback.oley@verne42.com
 We will be creating issues with the feedback we receive.
 
 You can test our deployed beta version:
-verne-42.com
+http://verne-42.com
 
 # Development
 
