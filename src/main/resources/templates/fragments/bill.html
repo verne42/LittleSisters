@@ -1,0 +1,202 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<body>
+		<!-- ============================================================== -->
+		<!-- wrapper  -->
+		<!-- ============================================================== -->
+		<div th:fragment="billID-dashboard" class="container">
+			<div class="row">
+				<div class = "col-4" style="background-color: #009cdb;">
+					<h2>Views</h2>
+					<h4>34</h4>
+				</div>
+				<div class = "col-4" style="background-color: #33b0e2;">
+					<h2>Shares</h2>
+					<h4>33</h4>
+				</div>
+				<div class = "col-4" style="background-color: #79cef1;">
+					<h2>Opinions</h2>
+					<h4>30</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p th:utext="${'&lt;b&gt;' + 'Description: ' + '&lt;/b&gt;&lt;br&gt;' + bill.getText()}" style="color: black;">Bill Text</p>
+					<a href="#" class="fa fa-file-pdf-o" style="font-size: x-large;"></a>
+					<br>
+					<p th:utext="${'&lt;b&gt;' + 'Agenda: ' + '&lt;/b&gt;&lt;br&gt;' + bill.getAgenda()}" style="color: black;">Bill Agenda</p>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 35px; margin-top: 20;">
+				<div class="col">
+					<a href="#" class="fa fa-facebook" style="font-size: xx-large; color: #3B5998;"></a>
+				</div>
+				<div class="col">
+					<a href="#" class="fa fa-twitter" style="font-size: xx-large;  color: #55ACEE;"></a>
+				</div>
+				<div class="col">
+					<a href="#" class="fa fa-linkedin" style="font-size: xx-large; color: #007bb5;"></a>
+				</div>
+				<div class="col">
+					<a href="#" class="fa fa-reddit socialmediaicons" style="font-size: xx-large; color: #ff5700;"></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="container">
+					<div class="row">
+						<div class="col-6">
+							<div class="rating-block">
+								<h4>Average user rating</h4>
+								<h2 class="bold padding-bottom-7">4.3 <small>/ 5</small></h2>
+								<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+								<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+								<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+								<button type="button" class="btn-default btn-sm" style="margin-right: 4px;"/>
+								<button type="button" class="btn-default btn-sm"/>
+							</div>
+						</div>
+						<div class="col-6">
+							<h4>Rating breakdown</h4>
+							<div class="pull-left">
+								<div class="pull-left" style="width:35px; line-height:1;">
+									<div style="height:9px; margin:5px 0;">
+										5 
+									</div>
+								</div>
+								<div class="pull-left" style="width:180px;">
+									<div class="progress" style="height:9px; margin:8px 0;">
+									  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 1000%">
+										<span class="sr-only">80% Complete (danger)</span>
+									  </div>
+									</div>
+								</div>
+								<div class="pull-right" style="margin-left:10px;">1</div>
+							</div>
+							<div class="pull-left">
+								<div class="pull-left" style="width:35px; line-height:1;">
+									<div style="height:9px; margin:5px 0;">
+										4
+									</div>
+								</div>
+								<div class="pull-left" style="width:180px;">
+									<div class="progress" style="height:9px; margin:8px 0;">
+									  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
+										<span class="sr-only">80% Complete (danger)</span>
+									  </div>
+									</div>
+								</div>
+								<div class="pull-right" style="margin-left:10px;">1</div>
+							</div>
+							<div class="pull-left">
+								<div class="pull-left" style="width:35px; line-height:1;">
+									<div style="height:9px; margin:5px 0;">3</div>
+								</div>
+								<div class="pull-left" style="width:180px;">
+									<div class="progress" style="height:9px; margin:8px 0;">
+									  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
+										<span class="sr-only">80% Complete (danger)</span>
+									  </div>
+									</div>
+								</div>
+								<div class="pull-right" style="margin-left:10px;">0</div>
+							</div>
+							<div class="pull-left">
+								<div class="pull-left" style="width:35px; line-height:1;">
+									<div style="height:9px; margin:5px 0;">2</div>
+								</div>
+								<div class="pull-left" style="width:180px;">
+									<div class="progress" style="height:9px; margin:8px 0;">
+									  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%">
+										<span class="sr-only">80% Complete (danger)</span>
+									  </div>
+									</div>
+								</div>
+								<div class="pull-right" style="margin-left:10px;">0</div>
+							</div>
+							<div class="pull-left">
+								<div class="pull-left" style="width:35px; line-height:1;">
+									<div style="height:9px; margin:5px 0;">1</div>
+								</div>
+								<div class="pull-left" style="width:180px;">
+									<div class="progress" style="height:9px; margin:8px 0;">
+									  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5" style="width: 20%">
+										<span class="sr-only">80% Complete (danger)</span>
+									  </div>
+									</div>
+								</div>
+								<div class="pull-right" style="margin-left:10px;">0</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="margin-bottom: 35px; margin-top: 20;">
+						<div class="col">
+							<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#bill-comments">Comments</button>
+						</div>
+					</div>
+					<div id="bill-comments" class="row collapse">
+						<div class="col">
+							<hr/>
+							<div class="review-block">
+								<div class="row">
+									<div class="col-4">
+										<div class="review-block-name"><a href="#">afsg77</a></div>
+										<div class="review-block-date">January 29, 2019<br/>1 day ago</div>
+									</div>
+									<div class="col-8">
+										<div class="review-block-rate">
+											<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-default btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-default btn-sm"/>
+										</div>
+										<div class="review-block-title"><i>This still a beta to get feedback</i></div>
+										<div class="review-block-description">This functionality is not yet available but we are working to have it  as fast as possible.</div>
+									</div>
+								</div>
+								<hr/>
+								<div class="row">
+									<div class="col-4">
+										<div class="review-block-name"><a href="#">afsg77</a></div>
+										<div class="review-block-date">January 29, 2019<br/>1 day ago</div>
+									</div>
+									<div class="col-8">
+										<div class="review-block-rate">
+											<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-default btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-default btn-sm"/>
+										</div>
+										<div class="review-block-title"><i>Please hurry!!!!</i></div>
+										<div class="review-block-description">I want to comment!!!</div>
+									</div>
+								</div>
+								<hr/>
+								<div class="row">
+									<div class="col-4">
+										<div class="review-block-name"><a href="#">afsg77</a></div>
+										<div class="review-block-date">January 29, 2019<br/>1 day ago</div>
+									</div>
+									<div class="col-8">
+										<div class="review-block-rate">
+											<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-default btn-sm" style="margin-right: 4px;"/>
+											<button type="button" class="btn-default btn-sm"/>
+										</div>
+										<div class="review-block-title"><i>A generic comment tittle</i></div>
+										<div class="review-block-description">Another generic comment text.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ============================================================== -->
+		<!-- End wrapper -->
+		<!-- ============================================================== -->
+	</body>
+</html>

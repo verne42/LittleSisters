@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/header :: oley-head"/>
+	<body class="open">
+		<!-- Left Panel -->
+		<div th:replace="fragments/menu :: oley-menu"></div>
+		<!-- /#left-panel -->
+		<!-- Right Panel -->
+		<div id="right-panel" class="right-panel">
+			<header th:replace="fragments/header :: oley-header"/>
+		</div>
+
+		<div class="container">
+			<!-- Legislators table -->
+			<div th:if="${not #lists.isEmpty(legislators)}" class="row" id="legislators-table">
+				<div th:replace="fragments/legislators :: legislators-billID"></div>
+			</div>
+		</div>
+
+		<footer th:replace="fragments/footer :: verne42-footer"/>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:fragment="oley-head">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"/>
+		<link rel="stylesheet" th:href="@{/webjars/bootstrap-select/1.13.3/css/bootstrap-select.min.css}"/>
+		<link rel="stylesheet" th:href="@{/assets/css/style.css}"/>
+		<link rel="stylesheet" th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.min.css}"/>
+		<link rel="stylesheet" th:href="@{/assets/css/bootstrap-tagsinput.css}"/>
+		
+		<title>
+			Oley
+		</title>
+	</head>
+	<body>
+		<header th:fragment="oley-header" id="header" class="header" style="padding-left: 0px;">
+			<div class="top-left">
+				<div class="navbar-header">
+					<a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+					<a class="navbar-brand" href="http://verne-42.com"><img src="images/logo.png" alt="Logo" style="height: 44px; margin-left: 50px;"></a>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>

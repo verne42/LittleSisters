@@ -1,0 +1,64 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/header :: oley-head"/>
+	<body class="open">
+		<!-- Left Panel -->
+		<div th:replace="fragments/menu :: oley-menu"></div>
+		<!-- /#left-panel -->
+		<!-- Right Panel -->
+		<div id="right-panel" class="right-panel">
+			<header th:replace="fragments/header :: oley-header"/>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="container">
+						<div class="row">
+							<h1 style="color: #1da7de;">Little Sister Oley</h1>
+						</div>
+						<div class="row" style="margin-top: 50px;">
+							<header>
+								<h4>Who are we?</h4>
+							</header>
+							<p>Verne42 is an <a href="https://github.com/verne42/LittleSisters" class="fa fa-reddit" style="font-size: large;  color: #ff5700;"></a> OpenSource community
+								created by mathematicians,
+								web developers, engineers, philosophers, painters, designers,
+								lawyers, illustrators, chefs, architects, entrepreneurs,
+								biochemists, and artists. Our common ground as citizens is
+								to improve our society, and we welcome everyone that wants
+								to be part of our community.</p>
+							<p>“Little Sisters” is our first OpenSource project, which
+								aims at simplifying the legislation flow in a clear,
+								concise, and more comprehensible way in order to be able
+								to demand accountability from our legislators.  </p>
+							<p>“Oley” is our first Little Sister. As a first iteration,
+								the functionality is still limited, but the data is real.
+								We need your feedback to get this project running! </p>
+							<p>Please let us know your thoughts by contacting us at feedback.oley@verne42.com</p>
+						</div>
+						<div class="row">
+							<p>You can start by testing the data from Mexico’s first legislature period:</p>
+						</div>
+						<div class="row">
+							<a th:href="@{/dashboard(country=mexico)}" type="button" class="btn btn-info"
+							   style="-webkit-appearance: none; color: #fff; background-color: #17a2b8; border-color: #17a2b8; margin-bottom: 10px; margin-top: 50; margin-left: 100; width: 163px;">
+								Mexico Bills
+							</a>
+						</div>
+						<div class="row">
+							<a th:href="@{/legislators(country=mexico)}" type="button" class="btn btn-info"
+							   style="-webkit-appearance: none; color: #fff; background-color: #17a2b8; border-color: #17a2b8; margin-bottom: 10px; margin-top: 50; margin-left: 100; width: 163px;">
+								Mexico Legislators
+							</a>
+						</div>
+						<div class="row">
+							<p><strong>NOTE: </strong> This is a minimum UI iteration.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer th:replace="fragments/footer :: verne42-footer"/>
+	</body>
+</html>

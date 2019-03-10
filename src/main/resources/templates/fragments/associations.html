@@ -1,0 +1,100 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<body>
+		<!-- ============================================================== -->
+		<!-- wrapper  -->
+		<!-- ============================================================== -->
+		<div th:fragment="associations-billID" class="container">
+			<div class="row">
+				<div class="col">
+					<div class="page-header">
+						<h2 class="pageheader-title">Associations Votes </h2>
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div th:if="${not #lists.isEmpty(associationsVotesTableChamber1?.values())}" class="col">
+					<div class="card">
+						<h5 th:text="${chamber1.getChamber()}" class="card-header">Legislature1</h5>
+						<div class="card-body">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th th:utext="#{table.associations.name.title}" scope="col">Association Name</th>
+										<!-- TODO <th th:utext="#{table.associations.vote.total}" scope="col">Total Votes</th> -->
+										<th th:utext="#{table.associations.vote.favor}" scope="col">In Favor</th>
+										<th th:utext="#{table.associations.vote.against}" scope="col">Against</th>
+										<th th:utext="#{table.associations.vote.abstention}" scope="col">Abstention</th>
+										<!-- TODO <th th:utext="#{table.associations.vote.absences}" scope="col">Absences</th>-->
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="association, rowStat: ${associationsVotesTableChamber1}">
+										<td>
+											<a th:text="${association.key}" 
+											th:href="@{/dashboard(country=${param.country[0]},billId=${bill.getBillId()},associationName=${association.key})}">Association Name</a>
+										</td>
+										<td>
+											<a th:text="${association.value.getInFavor()}" 
+											th:href="@{/dashboard(country=${param.country[0]},billId=${bill.getBillId()},associationName=${association.key},typeOfVote=IN_FAVOR)}" >In Favor</a>
+										</td>
+										<td>
+											<a th:text="${association.value.getAgainst()}" 
+											th:href="@{/dashboard(country=${param.country[0]},billId=${bill.getBillId()},associationName=${association.key},typeOfVote=AGAINST)}">Against</a>
+										</td>
+										<td>
+											<a th:text="${association.value.getAbstention()}" 
+											th:href="@{/dashboard(country=${param.country[0]},billId=${bill.getBillId()},associationName=${association.key},typeOfVote=ABSTENTION)}">Abstentions</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div th:if="${not #lists.isEmpty(associationsVotesTableChamber2?.values())}" class="col">
+					<div class="card">
+						<h5 th:text="${chamber2.getChamber()}" class="card-header">Legislature2</h5>
+						<div class="card-body">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th th:utext="#{table.associations.name.title}" scope="col">Association Name</th>
+										<!-- TODO <th th:utext="#{table.associations.vote.total}" scope="col">Total Votes</th> -->
+										<th th:utext="#{table.associations.vote.favor}" scope="col">In Favor</th>
+										<th th:utext="#{table.associations.vote.against}" scope="col">Against</th>
+										<th th:utext="#{table.associations.vote.abstention}" scope="col">Abstention</th>
+										<!-- TODO <th th:utext="#{table.associations.vote.absences}" scope="col">Absences</th>-->
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="association, rowStat: ${associationsVotesTableChamber2}">
+										<td>
+											<a th:text="${association.key}" 
+											th:href="@{/dashboard(country=${param.country[0]},billId=${bill.getBillId()},associationName=${association.key})}">Association Name</a>
+										</td>
+										<td>
+											<a th:text="${association.value.getInFavor()}" 
+											th:href="@{/dashboard(country=${param.country[0]},billId=${bill.getBillId()},associationName=${association.key},typeOfVote=IN_FAVOR)}" >In Favor</a>
+										</td>
+										<td>
+											<a th:text="${association.value.getAgainst()}" 
+											th:href="@{/dashboard(country=${param.country[0]},billId=${bill.getBillId()},associationName=${association.key},typeOfVote=AGAINST)}">Against</a>
+										</td>
+										<td>
+											<a th:text="${association.value.getAbstention()}" 
+											th:href="@{/dashboard(country=${param.country[0]},billId=${bill.getBillId()},associationName=${association.key},typeOfVote=ABSTENTION)}">Abstentions</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ============================================================== -->
+		<!-- End wrapper -->
+		<!-- ============================================================== -->
+	</body>
+</html>

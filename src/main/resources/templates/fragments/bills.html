@@ -1,0 +1,69 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<body>
+		<!-- ============================================================== -->
+		<!-- wrapper  -->
+		<!-- ============================================================== -->
+		<div th:fragment="bills-table" class="dashboard-wrapper">
+			<div class="container-fluid  dashboard-content">
+				<!-- ============================================================== -->
+				<!-- pageheader -->
+				<!-- ============================================================== -->
+				<div class="row">
+					<div class="col">
+						<input type="text" value="BetaSample,Cannabis,Equality,Technology,Abortion" data-role="tagsinput" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<div class="page-header">
+							<br>
+							<h2 th:utext="#{dashboard.bills.title}" class="pageheader-title">Bills </h2>
+							<br>
+							<p style="color: orangered">Click on a bill to see the legislators votes in that bill.</p>
+							<br>
+						</div>
+					</div>
+				</div>
+				<!-- ============================================================== -->
+				<!-- end pageheader -->
+				<!-- ============================================================== -->
+				<div class="row">
+					<!-- ============================================================== -->
+					<!-- striped table -->
+					<!-- ============================================================== -->
+					<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+						<div class="card">
+							<div class="card-body">
+								<table th:if="${not #lists.isEmpty(bills)}" class="table table-striped">
+									<tbody>
+										<tr th:each="bill, rowStat: ${bills}">
+											<td>
+												<a th:href="@{/dashboard(country=${param.country[0]},billId=${bill.getBillId()})}" 
+												th:utext="${'&lt;b&gt;' + 'Description: ' + '&lt;/b&gt;&lt;br&gt;' + bill.getText()}">Bill Text</a>
+												<br>
+												<p><strong>Rating</strong></p>
+												<div class="review-block-rate">
+													<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+													<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+													<button type="button" class="btn-warning btn-sm" style="margin-right: 4px;"/>
+													<button type="button" class="btn-default btn-sm" style="margin-right: 4px;"/>
+													<button type="button" class="btn-default btn-sm"/>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- ============================================================== -->
+					<!-- end striped table -->
+					<!-- ============================================================== -->
+				</div>
+			</div>
+		</div>
+		<!-- ============================================================== -->
+		<!-- End wrapper -->
+		<!-- ============================================================== -->
+	</body>
+</html>
