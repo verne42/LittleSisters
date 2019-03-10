@@ -40,10 +40,10 @@ Note that on the first run you should import the data. By default we include the
 You can override this data with your data. You will need to create a volume to the container with your data in the following structure:
 
 data/$(Country)
-	/associations.csv (name,president,secretary,totalMembers,foundationDate,ideologiesList,socialNetworksList,politicalPosturesList,address,image)
-	/$(Legislature)
-		/bills.csv (billId,pdfURL,topics,voted,text,status,IN_FAVOR,AGAINST,ABSTENTION,ABSENCES)
-		/legislators.csv (legislatorId,name,electedBy,commissionsList,representedEntity,association,substitute,born,email,phone,photo,congressAbsences,ideologies,facebook,twitter,instagram,linkedin)
+    /associations.csv (name,president,secretary,totalMembers,foundationDate,ideologiesList,socialNetworksList,politicalPosturesList,address,image)
+    /$(Legislature)
+        /bills.csv (billId,pdfURL,topics,voted,text,status,IN_FAVOR,AGAINST,ABSTENTION,ABSENCES)
+        /legislators.csv (legislatorId,name,electedBy,commissionsList,representedEntity,association,substitute,born,email,phone,photo,congressAbsences,ideologies,facebook,twitter,instagram,linkedin)
 
 Notes: 
 - Empty values should be replace with null string.
